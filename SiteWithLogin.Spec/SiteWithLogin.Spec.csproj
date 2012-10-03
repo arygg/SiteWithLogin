@@ -65,8 +65,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LI1 LogIntoSite.feature</DependentUpon>
     </Compile>
+    <Compile Include="LI2 LogIntoSite.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LI2 LogIntoSite.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\Drivers\StartPageDriver.cs" />
+    <Compile Include="Steps\StepArguments\TableTransformations.cs" />
+    <Compile Include="Steps\StepArguments\UserProperties.cs" />
     <Compile Include="Steps\WebBrowserManager.cs" />
     <Compile Include="Steps\DatabaseSetup.cs" />
     <Compile Include="Steps\Drivers\RegisterPageDriver.cs" />
@@ -78,14 +85,16 @@
     <Compile Include="Steps\WebBrowserSetup.cs" />
     <Compile Include="Steps\When\LogInWhen.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Steps\StepArguments\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="LI1 LogIntoSite.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LI1 LogIntoSite.feature.cs</LastGenOutput>
+    </None>
+    <None Include="LI2 LogIntoSite.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LI2 LogIntoSite.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

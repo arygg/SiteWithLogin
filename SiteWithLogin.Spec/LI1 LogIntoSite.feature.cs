@@ -102,6 +102,29 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("User attempts to log in")]
+        [NUnit.Framework.TestCaseAttribute("demo", "demo2012", "demo", "demo2012", "Hello, demo!", null)]
+        [NUnit.Framework.TestCaseAttribute("valid", "valid123", "invalid", "invalid", "The user name or password provided is incorrect.", null)]
+        [NUnit.Framework.TestCaseAttribute("valid", "valid123", "valid", "invalid", "The user name or password provided is incorrect.", null)]
+        [NUnit.Framework.TestCaseAttribute("valid", "valid123", "invalid", "valid", "The user name or password provided is incorrect.", null)]
+        public virtual void UserAttemptsToLogIn(string configuredUsername, string configuredPassword, string username, string password, string displayMessage, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User attempts to log in", exampleTags);
+#line 19
+this.ScenarioSetup(scenarioInfo);
+#line 20
+ testRunner.Given(string.Format("I have a user with username \"{0}\" and password \"{1}\"", configuredUsername, configuredPassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+ testRunner.And("I am on the start page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.When(string.Format("I log in with the username \"{0}\" and the password \"{1}\"", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+ testRunner.Then(string.Format("the current page should display \"{0}\"", displayMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

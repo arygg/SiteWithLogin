@@ -6,6 +6,7 @@ namespace SiteWithLogin.Spec.Steps.Then
     [Binding]
     public class LoginThen
     {
+        [Then(@"the current page should display ""(.*)""")]
         [Then(@"the login page should display ""(.*)""")]
         [Then(@"the start page should display ""(.*)""")]
         public void ThenTheStartPageShouldDisplay(string expectedDisplayMessage)
