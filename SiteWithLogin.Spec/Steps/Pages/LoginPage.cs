@@ -8,6 +8,6 @@ namespace SiteWithLogin.Spec.Steps.Pages
 
         public TextField Username { get { return Document.TextField("UserName"); } }
         public TextField Password { get { return Document.TextField("Password"); } }
-        public Link LogIn { get { return Document.Link(Find.ByText("Log in")); } }
+        public Button LogIn { get { return Document.Button(Find.ByValue("Log in")); } }
     }
 }

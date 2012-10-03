@@ -15,8 +15,15 @@ namespace SiteWithLogin.Spec.Steps.Drivers
         {
             var browser = GetBrowserOnStartPage();
             var startPage = browser.Page<StartPage>();
-            
+            startPage.LogIn.Click();
+
+            // login link redirects to the login page
+            var loginPage = browser.Page<LoginPage>();
+            loginPage.Username.TypeText(username);
+            loginPage.Password.TypeText(password);
+            loginPage.LogIn.Click();
         }
+
 
         private static IE GetBrowserOnStartPage()
         {

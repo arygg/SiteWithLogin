@@ -1,5 +1,4 @@
 ﻿using SiteWithLogin.Spec.Steps.Drivers;
-
 using TechTalk.SpecFlow;
 
 namespace SiteWithLogin.Spec.Steps.Given
@@ -10,7 +9,7 @@ namespace SiteWithLogin.Spec.Steps.Given
         [Given(@"I am on the start page")]
         public void GivenIAmOnTheStartPage()
         {
-            // go to start page
+            new StartPageDriver().NavigateToStartPage();
         }
 
         [Given(@"I have a user with username ""(.*)"" and password ""(.*)""")]
